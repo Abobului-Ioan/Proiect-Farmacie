@@ -29,272 +29,205 @@ namespace InterfataUtilizatorForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.labelId = new System.Windows.Forms.Label();
+            this.labelNume = new System.Windows.Forms.Label();
+            this.labelGramaj = new System.Windows.Forms.Label();
+            this.labelPret = new System.Windows.Forms.Label();
+            this.labelData = new System.Windows.Forms.Label();
+            this.textId = new System.Windows.Forms.TextBox();
+            this.textNume = new System.Windows.Forms.TextBox();
+            this.textGramaj = new System.Windows.Forms.TextBox();
+            this.textPret = new System.Windows.Forms.TextBox();
+            this.textDataExpirare = new System.Windows.Forms.TextBox();
+            this.gpbTipAdministrare = new System.Windows.Forms.GroupBox();
+            this.rdbSupozitor = new System.Windows.Forms.RadioButton();
+            this.rdbInhalator = new System.Windows.Forms.RadioButton();
+            this.rdbInjectabil = new System.Windows.Forms.RadioButton();
+            this.rdbCapsule = new System.Windows.Forms.RadioButton();
+            this.rdbLichid = new System.Windows.Forms.RadioButton();
+            this.gpbTipMedicament = new System.Windows.Forms.GroupBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.afisareListeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adaugareMedicamentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cautareMedicamentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stergereMedicamentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListaMedicamente = new System.Windows.Forms.ListBox();
+            this.gpbTipAdministrare.SuspendLayout();
+            this.gpbTipMedicament.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id";
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(12, 30);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.TabIndex = 0;
+            this.labelId.Text = "Id";
             // 
-            // label2
+            // labelNume
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nume";
+            this.labelNume.AutoSize = true;
+            this.labelNume.Location = new System.Drawing.Point(12, 59);
+            this.labelNume.Name = "labelNume";
+            this.labelNume.Size = new System.Drawing.Size(35, 13);
+            this.labelNume.TabIndex = 1;
+            this.labelNume.Text = "Nume";
             // 
-            // label3
+            // labelGramaj
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Gramaj";
+            this.labelGramaj.AutoSize = true;
+            this.labelGramaj.Location = new System.Drawing.Point(12, 86);
+            this.labelGramaj.Name = "labelGramaj";
+            this.labelGramaj.Size = new System.Drawing.Size(40, 13);
+            this.labelGramaj.TabIndex = 2;
+            this.labelGramaj.Text = "Gramaj";
             // 
-            // label4
+            // labelPret
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Pret";
+            this.labelPret.AutoSize = true;
+            this.labelPret.Location = new System.Drawing.Point(12, 113);
+            this.labelPret.Name = "labelPret";
+            this.labelPret.Size = new System.Drawing.Size(26, 13);
+            this.labelPret.TabIndex = 3;
+            this.labelPret.Text = "Pret";
             // 
-            // label5
+            // labelData
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 204);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Data expirari";
+            this.labelData.AutoSize = true;
+            this.labelData.Location = new System.Drawing.Point(12, 141);
+            this.labelData.Name = "labelData";
+            this.labelData.Size = new System.Drawing.Size(66, 13);
+            this.labelData.TabIndex = 4;
+            this.labelData.Text = "Data expirari";
             // 
-            // textBox1
+            // textId
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.textId.Location = new System.Drawing.Point(88, 27);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(47, 20);
+            this.textId.TabIndex = 5;
             // 
-            // textBox2
+            // textNume
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.textNume.Location = new System.Drawing.Point(88, 56);
+            this.textNume.Name = "textNume";
+            this.textNume.Size = new System.Drawing.Size(100, 20);
+            this.textNume.TabIndex = 6;
             // 
-            // textBox3
+            // textGramaj
             // 
-            this.textBox3.Location = new System.Drawing.Point(153, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.textGramaj.Location = new System.Drawing.Point(88, 86);
+            this.textGramaj.Name = "textGramaj";
+            this.textGramaj.Size = new System.Drawing.Size(100, 20);
+            this.textGramaj.TabIndex = 7;
             // 
-            // textBox4
+            // textPret
             // 
-            this.textBox4.Location = new System.Drawing.Point(153, 167);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.textPret.Location = new System.Drawing.Point(88, 113);
+            this.textPret.Name = "textPret";
+            this.textPret.Size = new System.Drawing.Size(100, 20);
+            this.textPret.TabIndex = 8;
             // 
-            // textBox5
+            // textDataExpirare
             // 
-            this.textBox5.Location = new System.Drawing.Point(153, 204);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.textDataExpirare.Location = new System.Drawing.Point(88, 141);
+            this.textDataExpirare.Name = "textDataExpirare";
+            this.textDataExpirare.Size = new System.Drawing.Size(100, 20);
+            this.textDataExpirare.TabIndex = 9;
             // 
-            // button1
+            // gpbTipAdministrare
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(54, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Adauga";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gpbTipAdministrare.Controls.Add(this.rdbSupozitor);
+            this.gpbTipAdministrare.Controls.Add(this.rdbInhalator);
+            this.gpbTipAdministrare.Controls.Add(this.rdbInjectabil);
+            this.gpbTipAdministrare.Controls.Add(this.rdbCapsule);
+            this.gpbTipAdministrare.Controls.Add(this.rdbLichid);
+            this.gpbTipAdministrare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbTipAdministrare.Location = new System.Drawing.Point(12, 178);
+            this.gpbTipAdministrare.Name = "gpbTipAdministrare";
+            this.gpbTipAdministrare.Size = new System.Drawing.Size(103, 138);
+            this.gpbTipAdministrare.TabIndex = 13;
+            this.gpbTipAdministrare.TabStop = false;
+            this.gpbTipAdministrare.Text = "Tip Administrare:";
+            this.gpbTipAdministrare.Enter += new System.EventHandler(this.gpbTipAdministrare_Enter);
             // 
-            // button2
+            // rdbSupozitor
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(54, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Afiseaza";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.rdbSupozitor.AutoSize = true;
+            this.rdbSupozitor.Location = new System.Drawing.Point(7, 115);
+            this.rdbSupozitor.Name = "rdbSupozitor";
+            this.rdbSupozitor.Size = new System.Drawing.Size(69, 17);
+            this.rdbSupozitor.TabIndex = 4;
+            this.rdbSupozitor.TabStop = true;
+            this.rdbSupozitor.Text = "Supozitor";
+            this.rdbSupozitor.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // rdbInhalator
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(54, 320);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(357, 96);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.rdbInhalator.AutoSize = true;
+            this.rdbInhalator.Location = new System.Drawing.Point(7, 87);
+            this.rdbInhalator.Name = "rdbInhalator";
+            this.rdbInhalator.Size = new System.Drawing.Size(66, 17);
+            this.rdbInhalator.TabIndex = 3;
+            this.rdbInhalator.TabStop = true;
+            this.rdbInhalator.Text = "Inhalator";
+            this.rdbInhalator.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // rdbInjectabil
             // 
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(337, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(103, 138);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tip Administare:";
+            this.rdbInjectabil.AutoSize = true;
+            this.rdbInjectabil.Location = new System.Drawing.Point(7, 64);
+            this.rdbInjectabil.Name = "rdbInjectabil";
+            this.rdbInjectabil.Size = new System.Drawing.Size(67, 17);
+            this.rdbInjectabil.TabIndex = 2;
+            this.rdbInjectabil.TabStop = true;
+            this.rdbInjectabil.Text = "Injectabil";
+            this.rdbInjectabil.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rdbCapsule
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 115);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(69, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Supozitor";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdbCapsule.AutoSize = true;
+            this.rdbCapsule.Location = new System.Drawing.Point(6, 43);
+            this.rdbCapsule.Name = "rdbCapsule";
+            this.rdbCapsule.Size = new System.Drawing.Size(63, 17);
+            this.rdbCapsule.TabIndex = 1;
+            this.rdbCapsule.TabStop = true;
+            this.rdbCapsule.Text = "Capsule";
+            this.rdbCapsule.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdbLichid
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 87);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(66, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Inhalator";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdbLichid.AutoSize = true;
+            this.rdbLichid.Location = new System.Drawing.Point(7, 20);
+            this.rdbLichid.Name = "rdbLichid";
+            this.rdbLichid.Size = new System.Drawing.Size(53, 17);
+            this.rdbLichid.TabIndex = 0;
+            this.rdbLichid.TabStop = true;
+            this.rdbLichid.Text = "Lichid";
+            this.rdbLichid.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // gpbTipMedicament
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 64);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Injectabil";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Capsule";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Lichid";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(502, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(115, 138);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tip Medicament:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Durere cap";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(53, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Febra";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 56);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(50, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Tuse";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(7, 77);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(95, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Durere stomac";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.gpbTipMedicament.Controls.Add(this.checkBox5);
+            this.gpbTipMedicament.Controls.Add(this.checkBox4);
+            this.gpbTipMedicament.Controls.Add(this.checkBox3);
+            this.gpbTipMedicament.Controls.Add(this.checkBox2);
+            this.gpbTipMedicament.Controls.Add(this.checkBox1);
+            this.gpbTipMedicament.Location = new System.Drawing.Point(128, 178);
+            this.gpbTipMedicament.Name = "gpbTipMedicament";
+            this.gpbTipMedicament.Size = new System.Drawing.Size(115, 138);
+            this.gpbTipMedicament.TabIndex = 14;
+            this.gpbTipMedicament.TabStop = false;
+            this.gpbTipMedicament.Text = "Tip Medicament:";
             // 
             // checkBox5
             // 
@@ -307,32 +240,144 @@ namespace InterfataUtilizatorForms
             this.checkBox5.UseVisualStyleBackColor = true;
             this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(7, 77);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(95, 17);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Durere stomac";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(7, 56);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(50, 17);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "Tuse";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 33);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(53, 17);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Febra";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(79, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Durere cap";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 332);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(188, 20);
+            this.dateTimePicker1.TabIndex = 17;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afisareListeiToolStripMenuItem,
+            this.adaugareMedicamentToolStripMenuItem,
+            this.modificareToolStripMenuItem,
+            this.cautareMedicamentToolStripMenuItem,
+            this.stergereMedicamentToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // afisareListeiToolStripMenuItem
+            // 
+            this.afisareListeiToolStripMenuItem.Name = "afisareListeiToolStripMenuItem";
+            this.afisareListeiToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.afisareListeiToolStripMenuItem.Text = "Afisare listei";
+            this.afisareListeiToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // adaugareMedicamentToolStripMenuItem
+            // 
+            this.adaugareMedicamentToolStripMenuItem.Name = "adaugareMedicamentToolStripMenuItem";
+            this.adaugareMedicamentToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.adaugareMedicamentToolStripMenuItem.Text = "Adaugare medicament";
+            this.adaugareMedicamentToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // modificareToolStripMenuItem
+            // 
+            this.modificareToolStripMenuItem.Name = "modificareToolStripMenuItem";
+            this.modificareToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.modificareToolStripMenuItem.Text = "Modificare ";
+            this.modificareToolStripMenuItem.Click += new System.EventHandler(this.btnModificare_Click);
+            // 
+            // cautareMedicamentToolStripMenuItem
+            // 
+            this.cautareMedicamentToolStripMenuItem.Name = "cautareMedicamentToolStripMenuItem";
+            this.cautareMedicamentToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.cautareMedicamentToolStripMenuItem.Text = "Cautare medicament";
+            this.cautareMedicamentToolStripMenuItem.Click += new System.EventHandler(this.cautareMedicamentToolStripMenuItem_Click);
+            // 
+            // stergereMedicamentToolStripMenuItem
+            // 
+            this.stergereMedicamentToolStripMenuItem.Name = "stergereMedicamentToolStripMenuItem";
+            this.stergereMedicamentToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
+            this.stergereMedicamentToolStripMenuItem.Text = "Stergere medicament";
+            this.stergereMedicamentToolStripMenuItem.Click += new System.EventHandler(this.stergereMedicamentToolStripMenuItem_Click);
+            // 
+            // ListaMedicamente
+            // 
+            this.ListaMedicamente.FormattingEnabled = true;
+            this.ListaMedicamente.Location = new System.Drawing.Point(251, 195);
+            this.ListaMedicamente.Name = "ListaMedicamente";
+            this.ListaMedicamente.Size = new System.Drawing.Size(443, 147);
+            this.ListaMedicamente.TabIndex = 19;
+            this.ListaMedicamente.SelectedIndexChanged += new System.EventHandler(this.ListaMedicamente_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ListaMedicamente);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.gpbTipMedicament);
+            this.Controls.Add(this.gpbTipAdministrare);
+            this.Controls.Add(this.textDataExpirare);
+            this.Controls.Add(this.textPret);
+            this.Controls.Add(this.textGramaj);
+            this.Controls.Add(this.textNume);
+            this.Controls.Add(this.textId);
+            this.Controls.Add(this.labelData);
+            this.Controls.Add(this.labelPret);
+            this.Controls.Add(this.labelGramaj);
+            this.Controls.Add(this.labelNume);
+            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gpbTipAdministrare.ResumeLayout(false);
+            this.gpbTipAdministrare.PerformLayout();
+            this.gpbTipMedicament.ResumeLayout(false);
+            this.gpbTipMedicament.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,31 +385,36 @@ namespace InterfataUtilizatorForms
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.Label labelNume;
+        private System.Windows.Forms.Label labelGramaj;
+        private System.Windows.Forms.Label labelPret;
+        private System.Windows.Forms.Label labelData;
+        private System.Windows.Forms.TextBox textId;
+        private System.Windows.Forms.TextBox textNume;
+        private System.Windows.Forms.TextBox textGramaj;
+        private System.Windows.Forms.TextBox textPret;
+        private System.Windows.Forms.TextBox textDataExpirare;
+        private System.Windows.Forms.GroupBox gpbTipAdministrare;
+        private System.Windows.Forms.RadioButton rdbSupozitor;
+        private System.Windows.Forms.RadioButton rdbInhalator;
+        private System.Windows.Forms.RadioButton rdbInjectabil;
+        private System.Windows.Forms.RadioButton rdbCapsule;
+        private System.Windows.Forms.RadioButton rdbLichid;
+        private System.Windows.Forms.GroupBox gpbTipMedicament;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem afisareListeiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adaugareMedicamentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cautareMedicamentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stergereMedicamentToolStripMenuItem;
+        private System.Windows.Forms.ListBox ListaMedicamente;
     }
 }
 

@@ -8,6 +8,8 @@ namespace NivelAccesDate
 {
     public class AdministrareDate_FisierText : IStocareData
     {
+        private const int ID_MEDICAMENT = 1;
+        private const int INCREMENT = 1;
         string NumeFisier { get; set; }
         public AdministrareDate_FisierText(string numeFisier)
         {
@@ -25,7 +27,7 @@ namespace NivelAccesDate
                 //al doilea parametru setat la 'true' al constructorului StreamWriter indica modul 'append' de deschidere al fisierului
                 using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
                 {
-                    swFisierText.WriteLine(m.ConversieLaSir());
+                    swFisierText.WriteLine(m.ConvertToString_File());
                 }
             }
             catch (IOException eIO)
@@ -37,9 +39,9 @@ namespace NivelAccesDate
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
         }
-        public ArrayList GetMedicament()
+        public List<Medicament> GetMedicaments()
         {
-            ArrayList medicaments = new ArrayList();
+            List<Medicament> medicaments = new List<Medicament>();
 
             try
             {
@@ -68,19 +70,184 @@ namespace NivelAccesDate
 
             return medicaments;
         }
+        public Medicament GetMedicament(string nume)
+        {
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Medicament medicamentFisier = new Medicament(line);
+                        if (nume.ToUpper() == medicamentFisier.nume_medicament.ToUpper())
+                            return medicamentFisier;
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return null;
+        }
+        public List<Medicament> GetMedicamentL(string nume)
+        {
+            List<Medicament> medicamente = new List<Medicament>();
 
-        //public void RewriteMedicaments(List<Medicament> listOfMedicaments)
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Medicament medicamentDinFisier = new Medicament(line);
+                        if (nume.ToUpper() == medicamentDinFisier.nume_medicament.ToUpper())
+                        {
+                            medicamente.Add(medicamentDinFisier);
+                            return medicamente;
+                        }
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return null;
+        }
+
+        public Medicament GetMedicament(int idMedicament)
+        {
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string linieDinFisier;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((linieDinFisier = sr.ReadLine()) != null)
+                    {
+                       Medicament medicament= new Medicament(linieDinFisier);
+                        if (medicament.id == idMedicament)
+                        {
+                            return medicament;
+                        }
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return null;
+        }
+        public List<Medicament> GetMedicamentsFile()
+        {
+            List<Medicament> medicaments = new List<Medicament>();
+
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Medicament medicamentDinFisier = new Medicament(line);
+                        medicaments.Add(medicamentDinFisier);
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return medicaments;
+        }
+
+        public bool RewriteMedicaments(Medicament listOfMedicaments)
+        {
+            List<Medicament> medicament = GetMedicaments();
+            bool actualizareCuSucces = false;
+            try
+            {
+                
+                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+                {
+                    foreach (Medicament medicamentCaut in medicament)
+                    {
+                        Medicament medicamentFisier = medicamentCaut;
+
+                        if (medicamentCaut.id == listOfMedicaments.id)
+                        {
+                            medicamentFisier = listOfMedicaments;
+                        }
+                        swFisierText.WriteLine(medicamentFisier.ConvertToString_File());
+                    }
+                    actualizareCuSucces = true;
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return actualizareCuSucces;
+
+        }
+        //public bool RewriteMedicament(Medicament medicamentUpdate)
         //{
+
+        //    ArrayList medicament = GetMedicament();
+        //    File.Delete(NumeFisier);
+        //    bool actualizareCuSucces = false;
         //    try
         //    {
-        //        File.Delete(NumeFisier);
-        //        using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+        //        using (StreamWriter swFisierText = new StreamWriter(NumeFisier, false))
         //        {
-        //            foreach (var medicament in listOfMedicaments)
+        //            foreach (Medicament medicamentCaut in medicament)
         //            {
-        //                swFisierText.WriteLine(medicament.ConvertToString_File());
-
+        //                Medicament medicamentFisier = medicamentCaut;
+        //                //informatiile despre studentul actualizat vor fi preluate din parametrul "studentActualizat"
+        //                if (medicamentCaut.nume_medicament == medicamentUpdate.nume_medicament)
+        //                {
+        //                    medicamentFisier = medicamentUpdate;
+        //                }
+        //                swFisierText.WriteLine(medicamentFisier.ConvertToString_File());
         //            }
+        //            actualizareCuSucces = true;
         //        }
         //    }
         //    catch (IOException eIO)
@@ -92,23 +259,42 @@ namespace NivelAccesDate
         //        throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
         //    }
 
+        //    return actualizareCuSucces;
         //}
-        public bool RewriteMedicament(Medicament medicamentUpdate)
+        public List<Medicament> SearchMedicaments(Medicament medicamentCautat, List<Medicament> listaMedicamente)
         {
-            ArrayList medicament = GetMedicament();
+            //List<Car> autoFisier = GetCarsFile();
+            List<Medicament> medicamenteGasite = new List<Medicament>();
+            foreach (Medicament m in listaMedicamente)
+            {
+                if (medicamentCautat.nume_medicament == m.nume_medicament )
+                    medicamenteGasite.Add(m);
+            }
+
+            return medicamenteGasite;
+        }
+        public bool DeleteMedicament(Medicament MedicamentUpdate)
+        {
+            List<Medicament> medicament = GetMedicaments();
+            Medicament medicamentFisier;
+            File.Delete(NumeFisier);
             bool actualizareCuSucces = false;
+            int i = 0;
             try
             {
-                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, false))
+                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
                 {
-                    foreach (Medicament medicamentCaut in medicament)
+                    foreach (var medicamentCaut in medicament)
                     {
-                        Medicament medicamentFisier = medicamentCaut;
-                        //informatiile despre studentul actualizat vor fi preluate din parametrul "studentActualizat"
-                        if (medicamentCaut.nume_medicament == medicamentUpdate.nume_medicament)
+                        medicamentFisier = medicamentCaut;
+                        i++;
+                        if (medicamentFisier.id == MedicamentUpdate.id)
                         {
-                            medicamentFisier = medicamentUpdate;
+                            i--;
+                            continue;
                         }
+                        medicamentFisier.id = i;
+
                         swFisierText.WriteLine(medicamentFisier.ConvertToString_File());
                     }
                     actualizareCuSucces = true;
@@ -124,6 +310,39 @@ namespace NivelAccesDate
             }
 
             return actualizareCuSucces;
+        }
+        private int GetId()
+        {
+            int IdMedicament = ID_MEDICAMENT;
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string LinieDinFisier;
+                    Medicament ultimulMedicamentDinFisier = null;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((LinieDinFisier = sr.ReadLine()) != null)
+                    {
+                        ultimulMedicamentDinFisier = new Medicament(LinieDinFisier);
+                    }
+
+                    if (ultimulMedicamentDinFisier != null)
+                    {
+                        IdMedicament = ultimulMedicamentDinFisier.id + INCREMENT;
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return IdMedicament;
         }
 
     }

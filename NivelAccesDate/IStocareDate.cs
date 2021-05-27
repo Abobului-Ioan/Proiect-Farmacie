@@ -9,8 +9,14 @@ namespace NivelAccesDate
     public interface IStocareData
     {
         void AddMedicament(Medicament m);
-        ArrayList GetMedicament();
-        bool RewriteMedicament(Medicament medicamentUpdate);
+        List<Medicament> GetMedicaments();
+        bool RewriteMedicaments(Medicament listOfMedicaments);
+        Medicament GetMedicament(string nume);
+        Medicament GetMedicament(int idMedicament);
+        List<Medicament> GetMedicamentsFile();
+        List<Medicament> GetMedicamentL(string nume);
+        List<Medicament> SearchMedicaments(Medicament medicamentCautat, List<Medicament> listaMedicamente);
+        bool DeleteMedicament(Medicament medicamentUpdate);
     }
 
 }

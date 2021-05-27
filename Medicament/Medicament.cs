@@ -65,9 +65,10 @@ namespace MedicamentClass
 
         #region Constructori
         public Medicament() { }
+
         public Medicament(string info)
         {
-            string[] informatii = info.Split(',');
+            string[] informatii = info.Split(';');
             id = Convert.ToInt32(informatii[0]);
             nume_medicament = informatii[1];
             gramaj = Convert.ToInt32(informatii[2]);
@@ -101,24 +102,24 @@ namespace MedicamentClass
         public string ConversieLaSir()
         {
             string info;
-            info = $"\nID: {id} \nNume medicament: {nume_medicament} \nGramaj:  {gramaj } mg \nPret: { pret}  lei  \nData expirari: {data_expirare}\nTip Administrare:{genMedicament},\nTip Medicament:{TipMedicamentAsString}";
+            info = $"ID: {id} Nume medicament: {nume_medicament} Gramaj:  {gramaj} mg Pret: {pret}  lei  Data expirari: {data_expirare} Tip Administrare:{genMedicament} Tip Medicament:{TipMedicamentAsString}";
             return info;
         }
 
-        public static Medicament comparare(Medicament a, Medicament b)
-        {
-            if (a.pret >= b.pret)
-                return a;
-            else
-                return b;
-        }
+        //public static Medicament comparare(Medicament a, Medicament b)
+        //{
+        //    if (a.pret >= b.pret)
+        //        return a;
+        //    else
+        //        return b;
+        //}
 
 
         public string ConvertToString_File()
         {
 
             string sir = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}",
-                            SEPARATOR_PRINCIPAL_FISIER, id.ToString(), (nume_medicament ?? " NECUNOSCUT "), (gramaj.ToString()?? " NECUNOSCUT "), (pret.ToString() ?? "NECUNOSCUT"),  data_expirare.ToString(),genMedicament, TipMedicamentAsString);
+                            SEPARATOR_PRINCIPAL_FISIER, id.ToString(), (nume_medicament ?? " NECUNOSCUT "), (gramaj.ToString()?? " NECUNOSCUT "), (pret.ToString() ?? "NECUNOSCUT"),  data_expirare.ToString(),(int)genMedicament, TipMedicamentAsString);
 
             return sir;
         }
