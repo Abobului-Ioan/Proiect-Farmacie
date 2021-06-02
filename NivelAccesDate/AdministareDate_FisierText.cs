@@ -200,8 +200,8 @@ namespace NivelAccesDate
             bool actualizareCuSucces = false;
             try
             {
-                
-                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+            
+                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, false))
                 {
                     foreach (Medicament medicamentCaut in medicament)
                     {

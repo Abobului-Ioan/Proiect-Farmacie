@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Threading;
 using System.Linq;
-using Medicaments;
+using  MedicamentClass;
 
 
 namespace MedicamentClass

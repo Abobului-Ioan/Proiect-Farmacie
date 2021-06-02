@@ -48,7 +48,7 @@ namespace InterfataUtilizatorForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 fr1 = new Form1();
+            Farmacie fr1 = new Farmacie();
             fr1.Show();
             this.Close();
         }

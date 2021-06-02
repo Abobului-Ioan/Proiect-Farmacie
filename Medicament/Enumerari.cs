@@ -1,4 +1,4 @@
-﻿namespace Medicaments
+﻿namespace MedicamentClass
 {
     public enum TipAdministrare
     {
